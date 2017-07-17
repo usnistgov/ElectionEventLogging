@@ -1,4 +1,4 @@
-Draft NIST Special Publication 1500-101
+# **Draft NIST Special Publication 1500-101**
 
 DRAFT Election Event Logging Common Data Format Specification
 Draft Version 1.0
@@ -54,8 +54,8 @@ Common data format; disposition; elections; event; logging; timestamp; voting; V
 ## Acknowledgements
 The editor wishes to thank his colleagues of the National Institute of Standards and Technology VVSG-Interoperability Public Working Group, who reviewed drafts of this document and contributed to its technical content.  The editor gratefully acknowledges and appreciates the following contributors for their keen and insightful assistance with developing this specification:
 
-Jim Cantor, Hart Intercivic | McDermott Coots, UniSyn | Herb Deutsch, Election Systems and Software
 ---|---|---
+Jim Cantor, Hart Intercivic | McDermott Coots, UniSyn | Herb Deutsch, Election Systems and Software
 Arthur Keller, University of California | James Long, Smartmatic | Neal McBurnett, ElectionAudits
 John McCarthy, Verified Voting | Ian Piper, Dominion Voting Systems | Richard Rivello, National Institute of Standards and Technology
 Paul Stenbjorn, Election Information Systems |  |
@@ -87,10 +87,6 @@ The XML schema associated with this specification is generated from a UML (Unifi
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-	- [Reports on Computer Systems Technology](#reports-on-computer-systems-technology)
-	- [Abstract](#abstract)
-	- [Keywords](#keywords)
-	- [Acknowledgements](#acknowledgements)
 - [Executive Summary](#executive-summary)
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
@@ -173,12 +169,12 @@ The voting system equipment shall log at a minimum the following data characteri
 4. success or failure of event, if applicable;
 5. User ID trigger [sic] the event, if applicable;
 6. Resources requested, if applicable.
-i. Timekeeping mechanisms shall generate time and date values.
-ii. The precision of the timekeeping mechanism shall be able to distinguish and properly order all audit records.
-iii. Timestamps shall include the date and time, including hours, minutes and seconds.
-iv. Timestamps shall comply with ISO 8601 and provide all four digits of the year and include the applicable time zone.
-v. Voting system equipment shall only allow administrators to set or adjust the clock.
-vi. Voting system equipment shall limit clock drift to a minimum of one minute within a 15 hour period after the clock is set.
+  i. Timekeeping mechanisms shall generate time and date values.
+  ii. The precision of the timekeeping mechanism shall be able to distinguish and properly order all audit records.
+  iii. Timestamps shall include the date and time, including hours, minutes and seconds.
+  iv. Timestamps shall comply with ISO 8601 and provide all four digits of the year and include the applicable time zone.
+  v. Voting system equipment shall only allow administrators to set or adjust the clock.
+  vi. Voting system equipment shall limit clock drift to a minimum of one minute within a 15 hour period after the clock is set.
 
 The UML model and XML schema in the specification implement the requirements within Requirement D and add several additional optional fields for documentation purposes.  Those systems that satisfy Requirement D can export directly into the format described by this specification or can include a translation capability to convert from the manufacturer format into this specification's format.
 
