@@ -1,59 +1,63 @@
-# **Draft NIST Special Publication 1500-101**
-
-DRAFT Election Event Logging Common Data Format Specification
-Draft Version 1.0
+# **SP 1500-101 Election Event Logging Common Data Format Specification
+Draft Version 1.0**
 
 John P. Wack, editor
 
-This publication is available free of charge from:
-http://dx.doi.org/10.6028/NIST.SP.1500-101
+July 2017
 
-NIST Special Publication 1500-101
+  NIST Special Publication series 1500 is intended to capture external perspectives related to NIST standards, measurement, and testing-related efforts. These external perspectives can come from industry, academia, government, and others. These reports are intended to document external perspectives and do not necessarily represent official NIST positions.
 
-Election Event Logging Common Data Format Specification
+  Certain commercial entities, equipment, or materials may be identified in this document in order to describe an experimental procedure or concept adequately. Such identification is not intended to imply recommendation or endorsement by NIST, nor is it intended to imply that the entities, materials, or equipment are necessarily the best available for the purpose.
 
-Draft Version 1.0
+  There may be references in this publication to other publications currently under development by NIST in accordance with its assigned statutory responsibilities. The information in this publication, including concepts and methodologies, may be used by federal agencies even before the completion of such companion publications. Thus, until each publication is completed, current requirements, guidelines, and procedures, where they exist, remain operative. For planning and transition purposes, federal agencies may wish to closely follow the development of these new publications by NIST.
 
-John P. Wack, editor
+  Organizations are encouraged to review all draft publications during public comment periods and provide feedback to NIST. All NIST publications are available at http://www.nist.gov/publication-portal.cfm.
 
-This publication is available free of charge from:
-http://dx.doi.org/10.6028/NIST.SP.1500-101
+  National Institute of Standards and Technology
+  Attn: Software and Systems Division, Information Technology Laboratory
+  100 Bureau Drive (Mail Stop 8970) Gaithersburg, MD 20899-8930
+  Email: [voting@nist.gov](voting@nist.gov)
 
-Mar 2017
+## Table of Contents
 
-U. S. Department of Commerce
-Penny Pritzker, Secretary
+    <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-National Institute of Standards and Technology
-Willie May, Under Secretary of Commerce for Standards and Technology and Director
-National Institute of Standards and Technology (NIST) Special Publication 1500-101
-38 pages (Mar 2017)
+    - [Executive Summary](#executive-summary)
+    - [Table of Contents](#table-of-contents)
+    - [Introduction](#introduction)
+    	- [Purpose](#purpose)
+    	- [Audience](#audience)
+    	- [Motivation and methodology](#motivation-and-methodology)
+    - [Background and Overview](#background-and-overview)
+    	- [VVSG 1.1 logging requirements implemented](#vvsg-11-logging-requirements-implemented)
+    	- [Use cases for this specification](#use-cases-for-this-specification)
+    	- [UML Model](#uml-model)
+    	- [Documentation schema](#documentation-schema)
+    - [XML Schema Documentation](#xml-schema-documentation)
+    	- [Schema Stylistic Conventions](#schema-stylistic-conventions)
+    	- [Enumerations](#enumerations)
+    		- [*The **DeviceUsage** Enumeration*](#the-deviceusage-enumeration)
+    		- [*The **DispositionType** Enumeration*](#the-dispositiontype-enumeration)
+    	- [Elements and Complex Types - Election Event Logging Schema](#elements-and-complex-types-election-event-logging-schema)
+    		- [*The **ElectionEventLog** Element*](#the-electioneventlog-element)
+    		- [*The **Device** Element*](#the-device-element)
+    		- [*The **ElectionEvent** Element*](#the-electionevent-element)
+    	- [Elements and Complex Types - Election Event Logging Documentation Schema](#elements-and-complex-types-election-event-logging-documentation-schema)
+    		- [*The **ElectionEventIdDescription** Complex Type*](#the-electioneventiddescription-complex-type)
+    	- [*The **ElectionEventLogDocumentation>** Complex Type*](#the-electioneventlogdocumentation-complex-type)
+    		- [*The **ElectionEventTypeDescription** Complex Type*](#the-electioneventtypedescription-complex-type)
+    - [Appendices](#appendices)
+    	- [Acronyms](#acronyms)
+    	- [Glossary](#glossary)
+    	- [References](#references)
+    	- [File Download Locations](#file-download-locations)
+    	- [Election Event Logging XML Schema](#election-event-logging-xml-schema)
+    	- [Election Event Logging Documentation XML Schema](#election-event-logging-documentation-xml-schema)
 
-NIST Special Publication series 1500 is intended to capture external perspectives related to NIST standards, measurement, and testing-related efforts. These external perspectives can come from industry, academia, government, and others. These reports are intended to document external perspectives and do not necessarily represent official NIST positions.
-
-Certain commercial entities, equipment, or materials may be identified in this document in order to describe an experimental procedure or concept adequately. Such identification is not intended to imply recommendation or endorsement by NIST, nor is it intended to imply that the entities, materials, or equipment are necessarily the best available for the purpose.
-
-There may be references in this publication to other publications currently under development by NIST in accordance with its assigned statutory responsibilities. The information in this publication, including concepts and methodologies, may be used by federal agencies even before the completion of such companion publications. Thus, until each publication is completed, current requirements, guidelines, and procedures, where they exist, remain operative. For planning and transition purposes, federal agencies may wish to closely follow the development of these new publications by NIST.
-
-Organizations are encouraged to review all draft publications during public comment periods and provide feedback to NIST. All NIST publications are available at http://www.nist.gov/publication-portal.cfm.
-
-    National Institute of Standards and Technology
-    Attn: Software and Systems Division, Information Technology Laboratory
-    100 Bureau Drive (Mail Stop 8970) Gaithersburg, MD 20899-8930
-    Email: voting@nist.gov
-
-## Reports on Computer Systems Technology
-The Information Technology Laboratory (ITL) at the National Institute of Standards and Technology (NIST) promotes the U.S. economy and public welfare by providing technical leadership for the Nation's measurement and standards infrastructure. ITL develops tests, test methods, reference data, proof of concept implementations, and technical analyses to advance the development and productive use of information technology. This document reports on ITL's research, guidance, and outreach efforts in Information Technology and its collaborative activities with industry, government, and academic organizations.
-
-## Abstract
-This publication describes an election event logging common data format specification for devices used in U.S. elections such as optical scanners, election management systems, and polling place devices.  The data logged generally contains information about the conduct of the election, such as when the polls open, when a voter starts a voting session or casts a ballot, or when administrators logon to the devices, etc.  The publication contains a UML model of the relevant election logging data and an XML format derived from the UML model.  It also contains background information regarding requirements for election event logging in the Election Assistance Commission's Voluntary Voting System Guidelines Version 1.1. It is part of a series of planned common data format specifications for voting equipment.
-
-## Keywords
-Common data format; disposition; elections; event; logging; timestamp; voting; VVSG.
+    <!-- /TOC -->
 
 ## Acknowledgements
 The editor wishes to thank his colleagues of the National Institute of Standards and Technology VVSG-Interoperability Public Working Group, who reviewed drafts of this document and contributed to its technical content.  The editor gratefully acknowledges and appreciates the following contributors for their keen and insightful assistance with developing this specification:
-
 
 * Jim Cantor, Hart Intercivic
 * Herb Deutsch, Election Systems and Software
@@ -87,44 +91,6 @@ This specification is geared towards the following audiences:
 * Election analysts and the public.
 
 The XML schema associated with this specification is generated from a UML (Unified Modeling Language) [3] model that defines the types, structure, and interrelationships of the data used in election event logs. The advantages to using a UML model include that the model can be more easily understood and subsequently modified, if required, and that formats such as XML or other formats can be generated or derived from the UML model.
-
-# Table of Contents
-
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [Executive Summary](#executive-summary)
-- [Table of Contents](#table-of-contents)
-- [Introduction](#introduction)
-	- [Purpose](#purpose)
-	- [Audience](#audience)
-	- [Motivation and methodology](#motivation-and-methodology)
-- [Background and Overview](#background-and-overview)
-	- [VVSG 1.1 logging requirements implemented](#vvsg-11-logging-requirements-implemented)
-	- [Use cases for this specification](#use-cases-for-this-specification)
-	- [UML Model](#uml-model)
-	- [Documentation schema](#documentation-schema)
-- [XML Schema Documentation](#xml-schema-documentation)
-	- [Schema Stylistic Conventions](#schema-stylistic-conventions)
-	- [Enumerations](#enumerations)
-		- [*The **DeviceUsage** Enumeration*](#the-deviceusage-enumeration)
-		- [*The **DispositionType** Enumeration*](#the-dispositiontype-enumeration)
-	- [Elements and Complex Types - Election Event Logging Schema](#elements-and-complex-types-election-event-logging-schema)
-		- [*The **ElectionEventLog** Element*](#the-electioneventlog-element)
-		- [*The **Device** Element*](#the-device-element)
-		- [*The **ElectionEvent** Element*](#the-electionevent-element)
-	- [Elements and Complex Types - Election Event Logging Documentation Schema](#elements-and-complex-types-election-event-logging-documentation-schema)
-		- [*The **ElectionEventIdDescription** Complex Type*](#the-electioneventiddescription-complex-type)
-	- [*The **ElectionEventLogDocumentation>** Complex Type*](#the-electioneventlogdocumentation-complex-type)
-		- [*The **ElectionEventTypeDescription** Complex Type*](#the-electioneventtypedescription-complex-type)
-- [Appendices](#appendices)
-	- [Acronyms](#acronyms)
-	- [Glossary](#glossary)
-	- [References](#references)
-	- [File Download Locations](#file-download-locations)
-	- [Election Event Logging XML Schema](#election-event-logging-xml-schema)
-	- [Election Event Logging Documentation XML Schema](#election-event-logging-documentation-xml-schema)
-
-<!-- /TOC -->
 
 <br>
 
