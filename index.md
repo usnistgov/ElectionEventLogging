@@ -181,7 +181,7 @@ The voting system equipment shall log at a minimum the following data characteri
   v. Voting system equipment shall only allow administrators to set or adjust the clock.
   vi. Voting system equipment shall limit clock drift to a minimum of one minute within a 15 hour period after the clock is set.
 
-The UML model and XML schema in the specification implement the requirements within Requirement D and add several additional optional fields for documentation purposes.  Those systems that satisfy Requirement D can export directly into the format described by this specification or can include a translation capability to convert from the manufacturer format into this specification's format.
+The UML model and XML schema in the specification implement the requirements within Requirement D and add several additional optional fields for documentation purposes and required fields for a unique identifier and hash of the event.  Those systems that satisfy Requirement D can export directly into the format described by this specification or can include a translation capability to convert from the manufacturer format into this specification's format.
 
 <br>
 
@@ -373,6 +373,7 @@ Element | Multiplicity | Type | Element Description
 `<Signature>` | 0 or 1 | `Signature` | Reference to the `<Signature>` element of the W3C digital signature schema imported into this schema.
 
 Schema Definition:
+
     <xsd:complexType name="ElectionEventLog">
         <xsd:sequence>
             <xsd:element name="Details" type="xsd:string" minOccurs="0"/>
