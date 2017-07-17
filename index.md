@@ -54,11 +54,16 @@ Common data format; disposition; elections; event; logging; timestamp; voting; V
 ## Acknowledgements
 The editor wishes to thank his colleagues of the National Institute of Standards and Technology VVSG-Interoperability Public Working Group, who reviewed drafts of this document and contributed to its technical content.  The editor gratefully acknowledges and appreciates the following contributors for their keen and insightful assistance with developing this specification:
 
----|---|---
-Jim Cantor, Hart Intercivic | McDermott Coots, UniSyn | Herb Deutsch, Election Systems and Software
-Arthur Keller, University of California | James Long, Smartmatic | Neal McBurnett, ElectionAudits
-John McCarthy, Verified Voting | Ian Piper, Dominion Voting Systems | Richard Rivello, National Institute of Standards and Technology
-Paul Stenbjorn, Election Information Systems |  |
+
+* Jim Cantor, Hart Intercivic
+* Herb Deutsch, Election Systems and Software
+* Arthur Keller, University of California
+* James Long, Smartmatic
+* Neal McBurnett, ElectionAudits
+* John McCarthy, Verified Voting
+* Ian Piper, Dominion Voting Systems
+* Richard Rivello, National Institute of Standards and Technology
+* Paul Stenbjorn, Election Information Systems
 
 In addition to the above acknowledgments, the editor also gratefully acknowledges and appreciate the significant contributions from individuals and organizations involved in the NIST Voting Interoperability Public Working Group as well as in the public and private sectors, whose thoughtful and constructive comments improved the overall quality, thoroughness, and usefulness of this publication.
 
