@@ -150,12 +150,12 @@ The voting system equipment shall log at a minimum the following data characteri
 4. success or failure of event, if applicable;
 5. User ID trigger [sic] the event, if applicable;
 6. Resources requested, if applicable.
-  i. Timekeeping mechanisms shall generate time and date values.
-  ii. The precision of the timekeeping mechanism shall be able to distinguish and properly order all audit records.
-  iii. Timestamps shall include the date and time, including hours, minutes and seconds.
-  iv. Timestamps shall comply with ISO 8601 and provide all four digits of the year and include the applicable time zone.
-  v. Voting system equipment shall only allow administrators to set or adjust the clock.
-  vi. Voting system equipment shall limit clock drift to a minimum of one minute within a 15 hour period after the clock is set.
+  * Timekeeping mechanisms shall generate time and date values.
+  * The precision of the timekeeping mechanism shall be able to distinguish and properly order all audit records.
+  * Timestamps shall include the date and time, including hours, minutes and seconds.
+  * Timestamps shall comply with ISO 8601 and provide all four digits of the year and include the applicable time zone.
+  * Voting system equipment shall only allow administrators to set or adjust the clock.
+  * Voting system equipment shall limit clock drift to a minimum of one minute within a 15 hour period after the clock is set.
 
 The UML model and XML schema in the specification implement the requirements within Requirement D and add several additional optional fields for documentation purposes and required fields for a unique identifier and hash of the event.  Those systems that satisfy Requirement D can export directly into the format described by this specification or can include a translation capability to convert from the manufacturer format into this specification's format.
 
