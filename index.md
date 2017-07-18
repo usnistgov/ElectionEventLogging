@@ -30,8 +30,10 @@
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [**SP 1500-101 Election Event Logging Common Data Format Specification Draft Version 1.0**](#sp-1500-101-election-event-logging-common-data-format-specification-draft-version-10)
+	- [Table of Contents](#table-of-contents)
+	- [Acknowledgements](#acknowledgements)
 - [Executive Summary](#executive-summary)
-- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 	- [Purpose](#purpose)
 	- [Audience](#audience)
@@ -51,9 +53,9 @@
 		- [*The **Device** Element*](#the-device-element)
 		- [*The **ElectionEvent** Element*](#the-electionevent-element)
 	- [Elements and Complex Types - Election Event Logging Documentation Schema](#elements-and-complex-types-election-event-logging-documentation-schema)
-		- [*The **ElectionEventIdDescription** Complex Type*](#the-electioneventiddescription-complex-type)
-    - [*The **ElectionEventLogDocumentation>** Complex Type*](#the-electioneventlogdocumentation-complex-type)
-    - [*The **ElectionEventTypeDescription** Complex Type*](#the-electioneventtypedescription-complex-type)
+		- [*The **ElectionEventIdDescription** Element*](#the-electioneventiddescription-element)
+		- [*The **ElectionEventLogDocumentation** Element*](#the-electioneventlogdocumentation-element)
+		- [*The **ElectionEventTypeDescription** Element*](#the-electioneventtypedescription-element)
 - [Appendices](#appendices)
 	- [Acronyms](#acronyms)
 	- [Glossary](#glossary)
@@ -62,7 +64,9 @@
 	- [Election Event Logging XML Schema](#election-event-logging-xml-schema)
 	- [Election Event Logging Documentation XML Schema](#election-event-logging-documentation-xml-schema)
 
-    <!-- /TOC -->
+<!-- /TOC -->
+
+<br>
 
 ## Acknowledgements
 The editor wishes to thank his colleagues of the National Institute of Standards and Technology VVSG-Interoperability Public Working Group, who reviewed drafts of this document and contributed to its technical content.  The editor gratefully acknowledges and appreciates the following contributors for their keen and insightful assistance with developing this specification:
@@ -474,7 +478,7 @@ The following sections deal with major elements and complex types in the Electio
 
 <br>
 
-### *The **ElectionEventIdDescription** Complex Type*
+### *The **ElectionEventIdDescription** Element*
 For associating a brief description with an election event log ID.
 
 Attribute | Required | Type | Attribute Description
@@ -498,7 +502,7 @@ Schema Definition:
 
 <br>
 
-### *The **ElectionEventLogDocumentation>** Complex Type*
+### *The **ElectionEventLogDocumentation** Element*
 `<ElectionEventLogDocumention>` is the root element.  It includes one or more `<ElectionEventIdDescription>` elements and `<ElectionEventTypeDescription>` elements, as well as other information for identifying the specific device associated with the election event documentation.
 
 The optional `<Signature>` element is used for an XML digital signature. `<Signature>` must be the last element of `<ElectionEventLogDocumention>`.
@@ -536,7 +540,7 @@ Schema Definition:
 
 <br>
 
-### *The **ElectionEventTypeDescription** Complex Type*
+### *The **ElectionEventTypeDescription** Element*
 For associating a brief description with an election event log type.
 
 Attribute | Required | Type | Attribute Description
