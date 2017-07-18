@@ -172,7 +172,7 @@ Figure 1, Election Event Logging UML Class Diagram, shows the UML model, which c
 
 ![Election Event Logging UML Class Diagram](Figures/Picture1.png)
 
-Figure 1 - Election Event Logging UML Class Diagram
+**Figure 1 - Election Event Logging UML Class Diagram**
 
 The ElectionEventLog class is the root class and contains information about the election event log file itself (as opposed to information about devices and election events).  The ElectionEventLog class is the parent of one or more Device classes, which contain information about the device(s) generating the election events. There can be multiple instances of the Device class depending on whether multiple devices are generating the election events.
 
@@ -183,19 +183,19 @@ The next 3 figures illustrate how the classes are associated to support the thre
 
 ![First use case for a single log file per device](Figures/Picture2.png)
 
-Figure 2 - First use case for a single log file per device
+**Figure 2 - First use case for a single log file per device**
 
 Figure 3, Second use case for successive devices writing to same log file, shows the associations for the second use case in which there may be multiple devices used successively to write to the same log file, which could occur if a device malfunctions, and the removable media containing the log file is re-inserted into a replacement device.
 
 ![Second use case for successive devices writing to same log file](Figures/Picture3.png)
 
-Figure 3 - Second use case for successive devices writing to same log file
+**Figure 3 - Second use case for successive devices writing to same log file**
 
 Figure 4, Third use case for a logging device connected to event generating devices, shows the associations for the third use case in which a logging device is connected to multiple devices.  The connected devices would send election events to the logging device, which writes events to the log file and maintains the correspondence between each device and its events.  Figure 4 does not show the logging device itself generating any events, however this could happen in practice.
 
 ![Third use case for a logging device connected to event generating devices](Figures/Picture4.png)
 
-Figure 4 - Third use case for a logging device connected to event generating devices
+**Figure 4 - Third use case for a logging device connected to event generating devices**
 
 <br>
 
@@ -209,7 +209,7 @@ The approach taken by this specification is to provide a second Election Event L
 
 ![Election Event Logging Documentation UML Class Diagram](Figures/Picture5.png)
 
-Figure 5 - Election Event Logging Documentation UML Class Diagram
+**Figure 5 - Election Event Logging Documentation UML Class Diagram**
 
 <br>
 
