@@ -179,9 +179,15 @@ The ElectionEvent class holds information about an election event, and there can
 
 The next 3 figures illustrate how the classes are associated to support the three use cases.  Figure 2, [First use case for a single log file per device](Figures/Picture2.png "First use case for a single log file per device"), shows the associations for the first use case in which there is a single log file per device and multiple, unbounded election events associated with the device.
 
+![First use case for a single log file per device](Figures/Picture2.png)
+
 Figure 3, [Second use case for successive devices writing to same log file](Figures/Picture3.png "Second use case for successive devices writing to same log file"), shows the associations for the second use case in which there may be multiple devices used successively to write to the same log file, which could occur if a device malfunctions, and the removable media containing the log file is re-inserted into a replacement device.
 
+![Second use case for successive devices writing to same log file](Figures/Picture3.png)
+
 Figure 4, [Third use case for a logging device connected to event generating devices](Figures/Picture4.png "Third use case for a logging device connected to event generating devices"), shows the associations for the third use case in which a logging device is connected to multiple devices.  The connected devices would send election events to the logging device, which writes events to the log file and maintains the correspondence between each device and its events.  Figure 4 does not show the logging device itself generating any events, however this could happen in practice.
+
+![Third use case for a logging device connected to event generating devices](Figures/Picture4.png)
 
 <br>
 
@@ -191,6 +197,8 @@ To analyze an election log, one must understand the meaning of the various event
 One approach to making event IDs easier to understand when analyzing multiple manufacturer devices is to make them consistent in meaning and use.  One could provide an event ID lexicon that would describe all known events and assign definitions/meanings to them, and each manufacturer could use this lexicon in all its election logs.  Ultimately, however, this approach was not taken in this specification, as defining such a lexicon across all devices as well as future devices will be time-consuming, may reduce innovation, and may still require periodic updates as new devices come on the market.  
 
 The approach taken by this specification is to provide a second Election Event Logging Documentation XML schema for containing the event ID documentation, along with documentation for each event type, as shown in Figure 5, [Election Event Logging Documentation UML Class Diagram](Figures/Picture5.png "Election Event Logging Documentation UML Class Diagram").  This format includes fields for device and manufacturer documents, additional details, and then a series of fields for containing each event ID and its corresponding definition, and each event type and its corresponding definition.  Manufacturers could include a documentation file in this format for each of their devices.  While a standard, consistent lexicon may ultimately be simpler for analysts, the approach taken here provides more flexibility for manufacturers and permits development of new event IDs as necessary, e.g., for new devices.
+
+![Election Event Logging Documentation UML Class Diagram](Figures/Picture5.png)
 
 <br>
 
