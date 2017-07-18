@@ -67,7 +67,7 @@
 <br>
 
 ## Acknowledgements
-The editor wishes to thank his colleagues of the National Institute of Standards and Technology VVSG-Interoperability Public Working Group, who contributed to the specifications's technical content.  The editor gratefully acknowledges and appreciates the following contributors for their keen and insightful assistance with developing this specification:
+The editor wishes to thank his colleagues of the National Institute of Standards and Technology VVSG-Interoperability Public Working Group, who contributed to the specification's technical content.  The editor gratefully acknowledges and appreciates the following contributors for their keen and insightful assistance with developing this specification:
 
 * Jim Cantor, Hart Intercivic
 * Herb Deutsch, Election Systems and Software
