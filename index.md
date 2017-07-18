@@ -10,12 +10,12 @@
 
     There may be references in this publication to other publications currently under development by NIST in accordance with its assigned statutory responsibilities. The information in this publication, including concepts and methodologies, may be used by federal agencies even before the completion of such companion publications. Thus, until each publication is completed, current requirements, guidelines, and procedures, where they exist, remain operative. For planning and transition purposes, federal agencies may wish to closely follow the development of these new publications by NIST.
 
-    Organizations are encouraged to review all draft publications during public comment periods and provide feedback to NIST. All NIST publications are available at http://www.nist.gov/publication-portal.cfm.
+Organizations are encouraged to review all draft publications during public comment periods and provide feedback to NIST. All NIST publications are available at [http://www.nist.gov/publication-portal.cfm](http://www.nist.gov/publication-portal.cfm).
 
-    National Institute of Standards and Technology
-    Attn: Software and Systems Division, Information Technology Laboratory
-    100 Bureau Drive (Mail Stop 8970) Gaithersburg, MD 20899-8930
-    Email: [voting@nist.gov](voting@nist.gov)
+National Institute of Standards and Technology
+Attn: Software and Systems Division, Information Technology Laboratory
+100 Bureau Drive (Mail Stop 8970) Gaithersburg, MD 20899-8930
+Email: [voting@nist.gov](voting@nist.gov)
 
 ## Table of Contents
 
@@ -43,7 +43,7 @@
 		- [*The **ElectionEvent** Element*](#the-electionevent-element)
 	- [Elements and Complex Types - Election Event Logging Documentation Schema](#elements-and-complex-types-election-event-logging-documentation-schema)
 		- [*The **ElectionEventIdDescription** Complex Type*](#the-electioneventiddescription-complex-type)
-	- [*The **ElectionEventLogDocumentation>** Complex Type*](#the-electioneventlogdocumentation-complex-type)
+	  - [*The **ElectionEventLogDocumentation>** Complex Type*](#the-electioneventlogdocumentation-complex-type)
 		- [*The **ElectionEventTypeDescription** Complex Type*](#the-electioneventtypedescription-complex-type)
 - [Appendices](#appendices)
 	- [Acronyms](#acronyms)
@@ -489,7 +489,7 @@ Schema Definition:
 
 <br>
 
-## *The **ElectionEventLogDocumentation>** Complex Type*
+### *The **ElectionEventLogDocumentation>** Complex Type*
 `<ElectionEventLogDocumention>` is the root element.  It includes one or more `<ElectionEventIdDescription>` elements and `<ElectionEventTypeDescription>` elements, as well as other information for identifying the specific device associated with the election event documentation.
 
 The optional `<Signature>` element is used for an XML digital signature. `<Signature>` must be the last element of `<ElectionEventLogDocumention>`.
