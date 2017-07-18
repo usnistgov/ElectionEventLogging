@@ -30,9 +30,7 @@
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [**SP 1500-101 Election Event Logging Common Data Format Specification Draft Version 1.0**](#sp-1500-101-election-event-logging-common-data-format-specification-draft-version-10)
-	- [Table of Contents](#table-of-contents)
-	- [Acknowledgements](#acknowledgements)
+- [Acknowledgements](#acknowledgements)
 - [Executive Summary](#executive-summary)
 - [Introduction](#introduction)
 	- [Purpose](#purpose)
@@ -69,7 +67,7 @@
 <br>
 
 ## Acknowledgements
-The editor wishes to thank his colleagues of the National Institute of Standards and Technology VVSG-Interoperability Public Working Group, who reviewed drafts of this document and contributed to its technical content.  The editor gratefully acknowledges and appreciates the following contributors for their keen and insightful assistance with developing this specification:
+The editor wishes to thank his colleagues of the National Institute of Standards and Technology VVSG-Interoperability Public Working Group, who contributed to the specifications's technical content.  The editor gratefully acknowledges and appreciates the following contributors for their keen and insightful assistance with developing this specification:
 
 * Jim Cantor, Hart Intercivic
 * Herb Deutsch, Election Systems and Software
@@ -81,7 +79,7 @@ The editor wishes to thank his colleagues of the National Institute of Standards
 * Richard Rivello, National Institute of Standards and Technology
 * Paul Stenbjorn, Election Information Systems
 
-In addition to the above acknowledgments, the editor also gratefully acknowledges and appreciate the significant contributions from individuals and organizations involved in the NIST Voting Interoperability Public Working Group as well as in the public and private sectors, whose thoughtful and constructive comments improved the overall quality, thoroughness, and usefulness of this publication.
+In addition to the above acknowledgments, the editor also gratefully acknowledges and appreciate other significant contributions from individuals and organizations involved in the NIST Voting Interoperability Public Working Group as well as in the public and private sectors, whose thoughtful and constructive comments improved the overall quality, thoroughness, and usefulness of this publication.
 
 <br>
 
