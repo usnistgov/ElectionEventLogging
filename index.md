@@ -1,5 +1,5 @@
 <title>NIST SP 1500-101 Election Event Logging Common Data Format Specification Draft Version 1.0</title>
-# **SP 1500-101 Election Event Logging Common Data Format Specification Draft Version 1.0**
+# **NIST SP 1500-101 Election Event Logging Common Data Format Specification Draft Version 1.0**
 
 **John P. Wack, editor**
 
