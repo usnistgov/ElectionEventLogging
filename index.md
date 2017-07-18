@@ -86,7 +86,7 @@ In addition to the above acknowledgments, the editor also gratefully acknowledge
 <br>
 
 # Executive Summary
-This publication is a specification for a common data format (CDF) for the election-related logging information produced by election devices, including voting devices in polling places or other voting equipment used to manage elections. This publication contains a definition for an XML (eXtensible Markup Language) schema [1] that specifies the common data format and how it is used.
+This publication is a specification for a common data format (CDF) for the election-related logging information produced by election devices, including voting devices in polling places or other voting equipment used to manage elections. This publication contains a definition for an XML (eXtensible Markup Language) schema that specifies the common data format and how it is used.
 
 Election logs generally contain information relevant to the conduct of the election for which the election device is being used. This information includes important events such as when voting operations are enabled on the device, or when a voter initiates a voting session, or when the device records that the voter has cast her ballot.  Logs can include errors such as the inability of a device to record a vote due to an internal error or that the polls have been opened or closed prematurely multiple times during the election day. Election analysts can use this information to determine not only whether the device itself was performing correctly but also whether the device was used correctly in the election, that is, used accordingly to election procedures. Additionally, analysts can derive various statistics from the log files, such as how often voters arrived and initiated voting sessions or the amount of time on average it took to cast a ballot.   
 
@@ -102,7 +102,7 @@ This specification is geared towards the following audiences:
 * Election-affiliated organizations;
 * Election analysts and the public.
 
-The XML schema associated with this specification is generated from a UML (Unified Modeling Language) [3] model that defines the types, structure, and interrelationships of the data used in election event logs. The advantages to using a UML model include that the model can be more easily understood and subsequently modified, if required, and that formats such as XML or other formats can be generated or derived from the UML model.
+The XML schema associated with this specification is generated from a UML (Unified Modeling Language) model that defines the types, structure, and interrelationships of the data used in election event logs. The advantages to using a UML model include that the model can be more easily understood and subsequently modified, if required, and that formats such as XML or other formats can be generated or derived from the UML model.
 
 <br>
 
@@ -346,7 +346,7 @@ The following sections deal with major elements and complex types in the Electio
 ### *The **ElectionEventLog** Element*
 `<ElectionEventLog>` is the root element.  It includes one or more `<Device>` elements for identifying the device(s) generating the election events, the date and time when the election event log was created, and an identification of the election. `<Details>` is used as needed for additional description/details.
 
-The optional `<Signature>` element is used for an XML digital signature [4]. `<Signature>` must be the last element of `<ElectionEventLog>`.
+The optional `<Signature>` element is used for an XML digital signature. `<Signature>` must be the last element of `<ElectionEventLog>`.
 
 Attribute | Required | Type | Attribute Description
 --- | :---: | --- | ---
