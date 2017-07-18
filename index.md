@@ -168,16 +168,14 @@ The third use case is much like the second in that there will be multiple device
 <br>
 
 ## UML Model
-Figure 1 shows the UML model, which consists of 3 classes, one for describing information about the log file such as when generated, a second class for describing information about the device model, manufacturer, and other related information, and a third class to contain the logged details for individual events.  The third class is associated with the second class so that the election events are properly associated with the generating device. All 3 classes and their attributes correspond very closely to major XML elements and their attributes in the generated XML schema.  Note: UML attributes that begin with a capital letter get generated as XML elements, whereas those UML attributes that begin with a lower-case letter get generated as XML attributes.
-
-Figure 1 - Election Event Logging UML Class Diagram
+Figure 1, [Election Event Logging UML Class Diagram](Figures/picture1.png "Election Event Logging UML Class Diagram"), shows the UML model, which consists of 3 classes, one for describing information about the log file such as when generated, a second class for describing information about the device model, manufacturer, and other related information, and a third class to contain the logged details for individual events.  The third class is associated with the second class so that the election events are properly associated with the generating device. All 3 classes and their attributes correspond very closely to major XML elements and their attributes in the generated XML schema.  Note: UML attributes that begin with a capital letter get generated as XML elements, whereas those UML attributes that begin with a lower-case letter get generated as XML attributes.
 
 The ElectionEventLog class is the root class and contains information about the election event log file itself (as opposed to information about devices and election events).  The ElectionEventLog class is the parent of one or more Device classes, which contain information about the device(s) generating the election events. There can be multiple instances of the Device class depending on whether multiple devices are generating the election events.
 
 Each instance of the Device class is a parent of one or more ElectionEvent classes, which contain information about specific election events.
 The ElectionEvent class holds information about an election event, and there can be multiple ElectionEvent classes per Device class.  
 
-Figures 2, 3, and 4 illustrate how the classes are associated to support the use general cases.  Figure 2 shows the associations for the first use case in which there is a single log file per device and multiple, unbounded election events associated with the device.
+The next 3 figures illustrate how the classes are associated to support the three use cases.  Figure 2 shows the associations for the first use case in which there is a single log file per device and multiple, unbounded election events associated with the device.
 
 Figure 2 - First use case for a single log file per device
 
