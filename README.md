@@ -12,6 +12,6 @@ There are two models and associated schemas, one for the log file and one for a 
 
 The UML models and schemas are under development but exepected to be finalized in time to be considered in the next VVSG under development by NIST and the Election Assistance Commission (EAC).  
 
-An eventual nist-pages branch will hold documentation files for an HTML version located on https://pages.nist.gov/ElectionEventLogging.
+The documentation is located on https://pages.nist.gov/ElectionEventLogging.
 
 Contact [John P. Wack](mailto:john.wack@nist.gov) for questions and more information.
