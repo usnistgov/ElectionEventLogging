@@ -181,6 +181,12 @@ The third use case is much like the second in that there will be multiple device
 ## UML Model
 Figure 1, Election Event Logging UML Class Diagram, shows the UML model, which consists of 3 classes, one for describing information about the log file such as when generated, a second class for describing information about the device model, manufacturer, and other related information, and a third class to contain the logged details for individual events.  The third class is associated with the second class so that the election events are properly associated with the generating device. All 3 classes and their attributes correspond very closely to major XML elements and their attributes in the generated XML schema.  Note: UML attributes that begin with a capital letter get generated as XML elements, whereas those UML attributes that begin with a lower-case letter get generated as XML attributes.
 
+<div class="text-center" markdown="1">
+<img src="Figures/Picture1.png"/>
+
+**Figure 1: Testing this**
+</div>
+
 ![Election Event Logging UML Class Diagram](Figures/Picture1.png)
 
 **Figure 1 - Election Event Logging UML Class Diagram**
