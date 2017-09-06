@@ -80,10 +80,12 @@ The editor wishes to thank his colleagues of the National Institute of Standards
 * Herb Deutsch, Election Systems and Software
 * Joshua Franklin, National Institute of Standards and Technology
 * Arthur Keller, University of California
+* Benjamin Long, National Institute of Standards and Technology
 * James Long, Smartmatic
 * Neal McBurnett, ElectionAudits
 * John McCarthy, Verified Voting
 * Ian Piper, Dominion Voting Systems
+* Andrew Regenschied, National Institute of Standards and Technology
 * Richard Rivello, National Institute of Standards and Technology
 * Paul Stenbjorn, Election Information Systems
 
