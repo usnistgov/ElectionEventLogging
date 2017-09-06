@@ -78,6 +78,7 @@ The editor wishes to thank his colleagues of the National Institute of Standards
 
 * Jim Cantor, Hart Intercivic
 * Herb Deutsch, Election Systems and Software
+* Joshua Franklin, National Institute of Standards and Technology
 * Arthur Keller, University of California
 * James Long, Smartmatic
 * Neal McBurnett, ElectionAudits
@@ -91,15 +92,15 @@ In addition to the above acknowledgments, the editor also gratefully acknowledge
 <br>
 
 # Executive Summary
-This publication is a specification for a common data format (CDF) for the election-related logging information produced by election devices, including voting devices in polling places or other voting equipment used to manage elections. This publication contains a definition for an XML (eXtensible Markup Language[\[1\]](#references)) schema that specifies the common data format and how it is used.
+This publication is a specification for a common data format (CDF) for the election-related logging information produced by election devices, including voting devices in polling places or other voting equipment used to manage elections. This publication contains a definition for an XML (eXtensible Markup Language[\[1\]](#appendix-c-references)) schema that specifies the common data format and how it is used.
 
 Election logs generally contain information relevant to the conduct of the election for which the election device is being used. This information includes important events such as when voting operations are enabled on the device, or when a voter initiates a voting session, or when the device records that the voter has cast her ballot.  Logs can include errors such as the inability of a device to record a vote due to an internal error or that the polls have been opened or closed prematurely multiple times during the election day. Election analysts can use this information to determine not only whether the device itself was performing correctly but also whether the device was used correctly in the election, that is, used accordingly to election procedures. Additionally, analysts can derive various statistics from the log files, such as how often voters arrived and initiated voting sessions or the amount of time on average it took to cast a ballot.   
 
 Currently, election devices do not create election logs in an interoperable common data format, but rather the log files are in proprietary formats and thus are more difficult for election analysts to read and analyze.  If the election logging documentation is not at hand, the logs can be unintelligible or require extensive reverse engineering efforts.  Thus, a common format for the election log information will make it easier for election officials and analysts and testing labs to understand the log files and, potentially, make more informed use of the log files for purposes of election auditing, research, and testing.
 
-This publication contains discussion of the requirements in the Election Assistance Commission's (EAC) Voluntary Voting System Guidelines (VVSG) Version 1.1[\[2\]](#references) that specify the required and optional election event information to be logged.
+This publication contains discussion of the requirements in the Election Assistance Commission's (EAC) Voluntary Voting System Guidelines (VVSG) Version 1.1[\[2\]](#appendix-c-references) that specify the required and optional election event information to be logged.
 
-This publication contains discussion of the requirements in the Election Assistance Commission's (EAC) Voluntary Voting System Guidelines (VVSG) Version 1.1[\[2\]](#references) and the Technical Guidelines Development Committee (TGDC) VVSG Recommendations of 2007[\[3\]](#references) that specify the required and optional election event information to be logged.
+This publication contains discussion of the requirements in the Election Assistance Commission's (EAC) Voluntary Voting System Guidelines (VVSG) Version 1.1[\[2\]](#appendix-c-references) and the Technical Guidelines Development Committee (TGDC) VVSG Recommendations of 2007[\[3\]](#appendix-c-references) that specify the required and optional election event information to be logged.
 
 The publication also includes a second schema for manufacturers to associate their specific event code documentation with the log files.
 
@@ -111,14 +112,14 @@ This specification is geared towards the following audiences:
 * Election-affiliated organizations;
 * Election analysts and the public.
 
-The XML schema associated with this specification is generated from a UML (Unified Modeling Language[\[3\]](#references)) model that defines the types, structure, and interrelationships of the data used in election event logs. The advantages to using a UML model include that the model can be more easily understood and subsequently modified, if required, and that formats such as XML or other formats can be generated or derived from the UML model.
+The XML schema associated with this specification is generated from a UML (Unified Modeling Language[\[4\]](#appendix-c-references)) model that defines the types, structure, and interrelationships of the data used in election event logs. The advantages to using a UML model include that the model can be more easily understood and subsequently modified, if required, and that formats such as XML or other formats can be generated or derived from the UML model.
 
 <br>
 
 # 1 Introduction
-This publication is a specification for an XML-based (eXtensible Markup Language[\[1\]](#references)) common data format (CDF) for election event logs that are produced by election devices used in U.S. states and territories.  The logs contain information generated by voting-related applications such as for election management systems (EMS), electronic pollbook applications, or vote-capture applications that operate on the election devices.  The sorts of information logged includes information required in the U.S. Election Assistance Commission (EAC)[\[2\]](#references) Voluntary Voting System Guidelines (VVSG) Version 1.1, which were taken from the Technical Guidelines Development Committee (TGDC) VVSG Recommendations of 2007[\[3\]](#references). Manufacturers may include additional information in the logs.
+This publication is a specification for an XML-based (eXtensible Markup Language[\[1\]](#appendix-c-references)) common data format (CDF) for election event logs that are produced by election devices used in U.S. states and territories.  The logs contain information generated by voting-related applications such as for election management systems (EMS), electronic pollbook applications, or vote-capture applications that operate on the election devices.  The sorts of information logged includes information required in the U.S. Election Assistance Commission (EAC)[\[2\]](#appendix-c-references) Voluntary Voting System Guidelines (VVSG) Version 1.1, which were taken from the Technical Guidelines Development Committee (TGDC) VVSG Recommendations of 2007[\[3\]](#appendix-c-references). Manufacturers may include additional information in the logs.
 
-This specification includes a data model in UML (Unified Modeling Language[\[4\]](#references)) that specifies and defines the data fields that are logged.  The XML format is generated from the UML model.
+This specification includes a data model in UML (Unified Modeling Language[\[4\]](#appendix-c-references)) that specifies and defines the data fields that are logged.  The XML format is generated from the UML model.
 
 <br>
 
@@ -156,12 +157,12 @@ This section provides background information about election equipment logging an
 
 Election applications such as EMS generally operate on devices including personal computers that themselves have an operating system and a logging capability.  The EAC VVSGs require the election applications to generate logs of events that are deemed in the VVSGs as significant, such as when the application allows a login by an administrator, or when the polls are opened and voting is enabled on the application, or when the application records a cast ballot (on an electronic vote capture device, for example).  These events are generally written to a separate log file typically named the *election event log*.
 
-Much security-related research has been applied to use of election event logs generated by voting devices.  See Appendix C, References, references [\[6\]](#references), [\[7\]](#references), [\[8\]](#references), and [\[9\]](#references) for further information, as well as [\[3\]](#references), Section 5.7 System Event Logging.
+Much security-related research has been applied to use of election event logs generated by voting devices.  See Appendix C, References, references [\[6\]](#appendix-c-references), [\[7\]](#appendix-c-references), [\[8\]](#appendix-c-references), and [\[9\]](#appendix-c-references) for further information, as well as [\[3\]](#appendix-c-references), Section 5.7 System Event Logging.
 
 <br>
 
 ## 2.1 VVSG logging requirements implemented
-In Section 2.1.5.1 of the EAC's VVSG 1.1, Operational Requirements[\[2\]](#references), Requirement D itemizes the data that voting equipment shall at a minimum log.  Requirement D is as follows:
+In Section 2.1.5.1 of the EAC's VVSG 1.1, Operational Requirements[\[2\]](#appendix-c-references), Requirement D itemizes the data that voting equipment shall at a minimum log.  Requirement D is as follows:
 
 The voting system equipment shall log at a minimum the following data characteristics for each type of event:
 
@@ -217,7 +218,7 @@ Attributes:
 *	Details – zero or 1 – for any details about the log file,
 *	electionId – zero or 1 – for identifying the election that the log file is specific to,
 *	generatedTime – 1 – for the generation date/time of the election event log file, and
-*	Signature – 0 or 1 – for associating a digital signature with the election event log file[\[5\]](#references), [\[10\]](#references).
+*	Signature – 0 or 1 – for associating a digital signature with the election event log file[\[5\]](#appendix-c-references), [\[10\]](#appendix-c-references).
 
 The ElectionEventLog class is the parent of one or more Device classes, described in the next section.
 
@@ -248,7 +249,7 @@ Attributes:
 -	Details – 0 or 1 – any additional information the manufacturer may include,
 -	disposition – 1 – an indication of the event status, if applicable, such as success, failure, etc., using the DispositionType enumeration,
 -	otherDisposition – used if the desired disposition type is not found in the DispositionType enumeration,
--	hash – 0 or 1 – to hold a cryptographic hash of the event[\[11\]](#references),
+-	hash – 0 or 1 – to hold a cryptographic hash of the event[\[11\]](#appendix-c-references),
 -	id – 1 – the identification number or string used by the manufacturer to identify the event,
 -	sequence – 1 – a unique identifier for the event, e.g., a sequential number,
 -	severity – 0 or 1 – an indication of severity, e.g., whether an event is critical, informational, etc.,
@@ -326,6 +327,8 @@ with the following exceptions:
 	*	`<OtherType>` follows `<Type>`.
 	*	If there is an enumeration value of `other`, it comes last in the list of
 values.
+
+In the sections below, an element or an enumeration name is denoted using a fixed font and angle brackets, e.g., `<ElectionEvent>`.  Enumeration values are in a fixed font, e.g., `other`.  An element is sometimes referred to as a “sub-element” when it is included in another element, e.g., `<ElectionEvent>` is a sub-element of `<ElectionEventLog>`.  “Includes” is used to denote that an element contains another element as a sub-element, e.g., `<ElectionEventLog>` includes `<ElectionEvent>`.  
 
 <br>
 
@@ -420,7 +423,7 @@ The following sections deal with major elements and complex types in the Electio
 ### 3.3.1 *The **ElectionEventLog** Element*
 `<ElectionEventLog>` is the root element.  It includes one or more `<Device>` elements for identifying the device(s) generating the election events, the date and time when the election event log was created, and an identification of the election. `<Details>` is used as needed for additional description/details.
 
-The optional `<Signature>` element is used for an XML digital signature[\[5\]](#references), [\[10\]](#references). `<Signature>` must be the last element of `<ElectionEventLog>`.
+The optional `<Signature>` element is used for an XML digital signature[\[5\]](#appendix-c-references), [\[10\]](#appendix-c-references). `<Signature>` must be the last element of `<ElectionEventLog>`.
 
 Attribute | Required | Type | Attribute Description
 --- | :---: | --- | ---
@@ -433,7 +436,7 @@ Element | Multiplicity | Type | Element Description
 --- | :---: | --- | ---
 `<Details>` | 0 or 1 | `xsd:string` | Used to associate any details with the event log.
 `<Device>` | 0 or more | `ElectionEvent` | Used to describe the device(s) generating the election events.
-`<Signature>` | 0 or 1 | `Signature` | Reference to the `<Signature>` element of the W3C digital signature schema imported into this schema[\[5\]](#references), [\[10\]](#references).
+`<Signature>` | 0 or 1 | `Signature` | Reference to the `<Signature>` element of the W3C digital signature schema imported into this schema[\[5\]](#appendix-c-references), [\[10\]](#appendix-c-references).
 
 Schema Definition:
 
@@ -579,7 +582,7 @@ Schema Definition:
 ### 3.4.2 *The **ElectionEventLogDocumentation** Element*
 `<ElectionEventLogDocumention>` is the root element.  It includes one or more `<ElectionEventIdDescription>` elements and `<ElectionEventTypeDescription>` elements, as well as other information for identifying the specific device associated with the election event documentation.
 
-The optional `<Signature>` element is used for an XML digital signature[\[5\]](#references), [\[10\]](#references). `<Signature>` must be the last element of `<ElectionEventLogDocumention>`.
+The optional `<Signature>` element is used for an XML digital signature[\[5\]](#appendix-c-references), [\[10\]](#appendix-c-references). `<Signature>` must be the last element of `<ElectionEventLogDocumention>`.
 
 Attribute | Required | Type | Attribute Description
 --- | :---: | --- | ---
@@ -595,7 +598,7 @@ Element | Multiplicity | Type | Element Description
 --- | :---: | --- | ---
 `<ElectionEventIdDescription>` | 1 or more | `ElectionEventIdDescription` | For associating a description with an event ID.
 `<ElectionEventTypeDescription>` | 1 or more | `ElectionEventTypeDescription` | For associating a description with an event type.
-`<Signature>` | 0 or 1 | `Signature` | Reference to the `<Signature>` element of the W3C digital signature schema imported into this schema[\[5\]](#references), [\[10\]](#references).
+`<Signature>` | 0 or 1 | `Signature` | Reference to the `<Signature>` element of the W3C digital signature schema imported into this schema[\[5\]](#appendix-c-references), [\[10\]](#appendix-c-references).
 
 Schema Definition:
 
@@ -664,11 +667,11 @@ Selected terms used throughout this document are defined below. In some of the d
 **Adjudication:**
 As used in elections, may be applied to the process of resolving centrally processed paper ballots that have been flagged for various reasons, including write-ins, overvotes, marginal marks, having no contests marked on the entire ballot, or the ballot being unreadable by a tabulator.
 
-**Cryptographic Hash Function:**
-A function that maps a bit string of arbitrary length to a fixed length bit string. Approved hash functions satisfy the following properties: (1) (One-way) It is computationally infeasible to find any input which maps to any pre-specified output, and (2) (Collision resistant) It is computationally infeasible to find any two distinct inputs that map to the same output[\[11\]](#references).
+**Cryptographic hash function:**
+A function that maps a bit string of arbitrary length to a fixed length bit string. Approved hash functions satisfy the following properties: (1) (One-way) It is computationally infeasible to find any input which maps to any pre-specified output, and (2) (Collision resistant) It is computationally infeasible to find any two distinct inputs that map to the same output[\[11\]](#appendix-c-references).
 
 **Digital signature:**
-An asymmetric key operation where the private key is used to digitally sign data and the public key is used to verify the signature. Digital signatures provide authenticity protection, integrity protection, and non-repudiation[\[10\]](#references).
+An asymmetric key operation where the private key is used to digitally sign data and the public key is used to verify the signature. Digital signatures provide authenticity protection, integrity protection, and non-repudiation[\[10\]](#appendix-c-references).
 
 **Direct record electronic (DRE):**
 An electronic vote-capture device that provides choices visible to the voter on a front panel of the machine in which voters directly enter choices into electronic storage with the use of a touch-screen, pushbuttons, or similar device. Note: An alphabetic keyboard is often provided with the entry device to allow for the possibility of write-in votes. The voter's choices are stored in these machines and added to the choices of all other voters.
@@ -705,17 +708,17 @@ Device that is used directly by a voter to cast a ballot. See also: direct recor
 
 [5] W3C, XML Signature Syntax and Processing (Second Edition), W3C Recommendation, June 10, 2008, [http://www.w3.org/TR/xmldsig-core/](http://www.w3.org/TR/xmldsig-core/).
 
-[6] David Wagner, Voting Systems Audit Log Study, June 2010,  [http://votingsystems.cdn.sos.ca.gov/oversight/directives/audit-log-report.pdf] (http://votingsystems.cdn.sos.ca.gov/oversight/directives/audit-log-report.pdf).
+[6] David Wagner, Voting Systems Audit Log Study, June 2010, [http://votingsystems.cdn.sos.ca.gov/oversight/directives/audit-log-report.pdf](http://votingsystems.cdn.sos.ca.gov/oversight/directives/audit-log-report.pdf).
 
-[7] Arel Codero, David Wagner, Replayable Voting Machine Audit Logs, July 2008,  [https://www.usenix.org/legacy/event/evt08/tech/full_papers/cordero/cordero.pdf](https://www.usenix.org/legacy/event/evt08/tech/full_papers/cordero/cordero.pdf).
+[7] Arel Codero, David Wagner, Replayable Voting Machine Audit Logs, July 2008, [https://www.usenix.org/legacy/event/evt08/tech/full_papers/cordero/cordero.pdf](https://www.usenix.org/legacy/event/evt08/tech/full_papers/cordero/cordero.pdf).
 
-[8] Patrick Baxter et al, Automated Analysis of Election Audit Logs, August 2012, [https://www.cs.princeton.edu/~annee/pdf/evtwote12-final35.pdf] (https://www.cs.princeton.edu/~annee/pdf/evtwote12-final35.pdf).
+[8] Patrick Baxter et al, Automated Analysis of Election Audit Logs, August 2012, [https://www.cs.princeton.edu/~annee/pdf/evtwote12-final35.pdf](https://www.cs.princeton.edu/~annee/pdf/evtwote12-final35.pdf).
 
-[9] Tigran Antonyan et al, Automating Voting Terminal Event Log Analysis, August 2009, [https://www.cs.princeton.edu/~annee/pdf/evtwote12-final35.pdf] (https://www.cs.princeton.edu/~annee/pdf/evtwote12-final35.pdf).
+[9] Tigran Antonyan et al, Automating Voting Terminal Event Log Analysis, August 2009, [https://www.usenix.org/legacy/event/evtwote09/tech/slides/antonyan.pdf](https://www.usenix.org/legacy/event/evtwote09/tech/slides/antonyan.pdf).
 
-[10] National Institute of Standards and Technology, Special Publication 800-63, Digital Identity Guidelines, June 2017, [http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-3.pdf] (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-3.pdf).
+[10] National Institute of Standards and Technology, Special Publication 800-63, Digital Identity Guidelines, June 2017, [http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-3.pdf](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-3.pdf).
 
-[11] National Institute of Standards and Technology, Special Publication 800-21 Second Edition, Guideline for Implementing Cryptography in the Federal Government, December 2005, [http://dx.doi.org/10.6028/NIST.SP.800-21e2] (http://dx.doi.org/10.6028/NIST.SP.800-21e2).
+[11] National Institute of Standards and Technology, Special Publication 800-21 Second Edition, Guideline for Implementing Cryptography in the Federal Government, December 2005, [http://dx.doi.org/10.6028/NIST.SP.800-21e2](http://dx.doi.org/10.6028/NIST.SP.800-21e2).
 
 <br>
 
