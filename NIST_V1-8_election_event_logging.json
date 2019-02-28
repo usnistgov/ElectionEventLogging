@@ -25,6 +25,9 @@
           "minItems": 0,
           "type": "array"
         },
+        "HashType": {
+          "$ref": "#/definitions/EventLogging.HashType"
+        },
         "Id": {
           "type": "string"
         },
@@ -32,6 +35,9 @@
           "type": "string"
         },
         "Model": {
+          "type": "string"
+        },
+        "OtherHashType": {
           "type": "string"
         },
         "OtherType": {
@@ -50,9 +56,9 @@
       "enum": [
         "adjudication",
         "ballot-activation",
-        "ballot-marking",
         "ballot-printing",
         "blank-ballot-printing",
+        "bmd",
         "dre",
         "dre-controller",
         "electronic-cast",
