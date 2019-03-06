@@ -165,6 +165,11 @@
           <xsd:documentation xml:lang="en">The type of the hash, from the HashType enumeration.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element name="OtherHashType" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">If HashType is 'other', the type of the hash.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element name="Id" type="xsd:string">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">A serial number or otherwise identifier associated with the device.</xsd:documentation>
@@ -180,19 +185,14 @@
           <xsd:documentation xml:lang="en">Model of the device.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="OtherHashType" type="xsd:string" minOccurs="0">
+      <xsd:element name="Type" type="DeviceType" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If HashType is 'other', the type of the hash.</xsd:documentation>
+          <xsd:documentation xml:lang="en">Enumerated usage of the device, e.g., ems, scan-single, etc.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="OtherType" type="xsd:string" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">Used when Type is 'other'.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="Type" type="DeviceType" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Enumerated usage of the device, e.g., ems, scan-single, etc.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="Version" type="xsd:string" minOccurs="0">
@@ -249,6 +249,11 @@
           <xsd:documentation xml:lang="en">The disposition, e.g., success or failure, of the event.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element name="OtherDisposition" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Used when Disposition is 'other'.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element name="Hash" type="xsd:string" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">Contains a cryptographic hash of the event, encoded as a string.</xsd:documentation>
@@ -257,11 +262,6 @@
       <xsd:element name="Id" type="xsd:string">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">An identifier associated with the event.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="OtherDisposition" type="xsd:string" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Used when Disposition is 'other'.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="Sequence" type="xsd:string">
