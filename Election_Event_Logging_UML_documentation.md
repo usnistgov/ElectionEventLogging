@@ -8,7 +8,10 @@
   - Classes
     - *The **[Device](#_18_2_43401a7_1458836797652_566165_4461)** Class*
     - *The **[ElectionEventLog](#_16_9_c0802fe_1373998775830_299520_2116)** Class*
+    - *The **[ElectionEventLogDocumentation](#_19_0_43701b0_1551892560159_591563_4768)** Class*
     - *The **[Event](#_16_9_c0802fe_1373996817517_272063_1501)** Class*
+    - *The **[EventIdDescription](#_19_0_43701b0_1551892560160_504752_4769)** Class*
+    - *The **[EventTypeDescription](#_19_0_43701b0_1551892560160_283613_4770)** Class*
 
 ## Enumerations
 
@@ -99,6 +102,23 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="_17_0_2_4_c0802fe_1377194442331_435875_2187"></a>`GeneratedTime`|1|`dateTime`|Identifies the date and time the log was generated.
 
 
+### <a name="_19_0_43701b0_1551892560159_591563_4768"></a>*The **ElectionEventLogDocumentation** Class*
+
+![Image of ElectionEventLogDocumentation](Election_Event_Logging_UML_documentation_files/_19_0_43701b0_1551892560301_503123_4850.png)
+
+ElectionEventLogDocumention is the root class. It includes [EventIdDescription](#_19_0_43701b0_1551892560160_504752_4769) and [EventTypeDescription](#_19_0_43701b0_1551892560160_283613_4770), as well as other information for identifying the specific device associated with the election event documentation.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_19_0_43701b0_1551892560169_110651_4776"></a>`DeviceId`|0..1|`String`|A serial number or otherwise identifier associated with the device.
+<a name="_19_0_43701b0_1551892560169_970324_4777"></a>`DeviceManufacturer`|1|`String`|Manufacturer of the device.
+<a name="_19_0_43701b0_1551892560170_517440_4778"></a>`DeviceModel`|1|`String`|Model of the device.
+<a name="_19_0_43701b0_1551892560170_28666_4779"></a>`DeviceVersion`|0..1|`String`|Version identification of the device.
+<a name="_19_0_43701b0_1551892560168_64794_4775"></a>`EventIdDescription`|1..*|`EventIdDescription`|For associating a description with an event ID.
+<a name="_19_0_43701b0_1551892560170_221772_4781"></a>`EventTypeDescription`|1..*|`EventTypeDescription`|For associating a description with an event type.
+<a name="_19_0_43701b0_1551892560170_754063_4780"></a>`GeneratedDate`|1|`date`|Identifies the date the documentation report was generated.
+
+
 ### <a name="_16_9_c0802fe_1373996817517_272063_1501"></a>*The **Event** Class*
 
 ![Image of Event](Election_Event_Logging_UML_documentation_files/_16_9_c0802fe_1373996816799_682999_1500.png)
@@ -118,5 +138,29 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="_16_9_f2e0365_1375897130018_465094_2311"></a>`TimeStamp`|1|`dateTime`|Identifies the date and time the event was generated.
 <a name="_16_9_f2e0365_1375897810995_956635_2337"></a>`Type`|1|`String`|Used for the type of event, as determined by the device vendor.
 <a name="_16_9_f2e0365_1375898485153_758275_2377"></a>`UserId`|0..1|`String`|An identifier associated with a user, as relevant.
+
+
+### <a name="_19_0_43701b0_1551892560160_504752_4769"></a>*The **EventIdDescription** Class*
+
+![Image of EventIdDescription](Election_Event_Logging_UML_documentation_files/_19_0_43701b0_1551892560293_491316_4849.png)
+
+For associating a brief description with an election event ID, used in [ElectionEventLogDocumentation](#_19_0_43701b0_1551892560159_591563_4768)::[EventIdDescription](#_19_0_43701b0_1551892560168_64794_4775).
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_19_0_43701b0_1551892560171_404873_4784"></a>`Description`|1|`String`|Used for a brief description of the event.
+<a name="_19_0_43701b0_1551892560171_302106_4785"></a>`Id`|1|`String`|An identifier associated with the event.
+
+
+### <a name="_19_0_43701b0_1551892560160_283613_4770"></a>*The **EventTypeDescription** Class*
+
+![Image of EventTypeDescription](Election_Event_Logging_UML_documentation_files/_19_0_43701b0_1551892560301_247583_4852.png)
+
+For associating a description with an election event log type, used in [ElectionEventLogDocumentation](#_19_0_43701b0_1551892560159_591563_4768)::EventTypeDescription.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_19_0_43701b0_1551892560172_590050_4787"></a>`Description`|1|`String`|Used for a description of the event type.
+<a name="_19_0_43701b0_1551892560172_2117_4788"></a>`Type`|1|`String`|An identifier associated with the event type.
 
 

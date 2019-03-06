@@ -1,5 +1,4 @@
 {
-  "$ref": "#/definitions/EventLogging.ElectionEventLog",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "EventLogging.Device": {
@@ -106,6 +105,56 @@
       },
       "type": "object"
     },
+    "EventLogging.ElectionEventLogDocumentation": {
+      "required": [
+        "@type",
+        "DeviceManufacturer",
+        "DeviceModel",
+        "EventIdDescription",
+        "EventTypeDescription",
+        "GeneratedDate"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "enum": [
+            "EventLogging.ElectionEventLogDocumentation"
+          ],
+          "type": "string"
+        },
+        "DeviceId": {
+          "type": "string"
+        },
+        "DeviceManufacturer": {
+          "type": "string"
+        },
+        "DeviceModel": {
+          "type": "string"
+        },
+        "DeviceVersion": {
+          "type": "string"
+        },
+        "EventIdDescription": {
+          "items": {
+            "$ref": "#/definitions/EventLogging.EventIdDescription"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "EventTypeDescription": {
+          "items": {
+            "$ref": "#/definitions/EventLogging.EventTypeDescription"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "GeneratedDate": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "type": "object"
+    },
     "EventLogging.Event": {
       "required": [
         "@type",
@@ -169,6 +218,52 @@
       ],
       "type": "string"
     },
+    "EventLogging.EventIdDescription": {
+      "required": [
+        "@type",
+        "Description",
+        "Id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "enum": [
+            "EventLogging.EventIdDescription"
+          ],
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "EventLogging.EventTypeDescription": {
+      "required": [
+        "@type",
+        "Description",
+        "Type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "enum": [
+            "EventLogging.EventTypeDescription"
+          ],
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
     "EventLogging.HashType": {
       "enum": [
         "md6",
@@ -178,5 +273,13 @@
       ],
       "type": "string"
     }
-  }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/definitions/EventLogging.ElectionEventLog"
+    },
+    {
+      "$ref": "#/definitions/EventLogging.ElectionEventLogDocumentation"
+    }
+  ]
 }
