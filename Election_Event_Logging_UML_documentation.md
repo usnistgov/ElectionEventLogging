@@ -1,4 +1,4 @@
-# EventLoggingV1-8
+# EventLoggingV1
 
 - Table of Contents
   - Enumerations
@@ -77,14 +77,14 @@ Device contains information about the device generating election event logs. [Id
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_18_2_43401a7_1458837370694_369735_4580"></a>`Details`|0..1|`String`|Used to associate any details with the event log.
-<a name="_18_2_43401a7_1458837284745_638566_4548"></a>`Event`|0..*|`Event`|Used to describe a logged event.
+<a name="_18_2_43401a7_1458837284745_638566_4548"></a>`{Event}`|0..*|`Event`|Used to describe a logged event.
 <a name="_19_0_43701b0_1551362077643_666577_6063"></a>`HashType`|0..1|`HashType`|The type of the hash, from the [HashType](#_19_0_43701b0_1551277104966_589263_4727) enumeration.
+<a name="_19_0_43701b0_1551362095000_687582_6067"></a>`OtherHashType`|0..1|`String`|If [HashType](#_19_0_43701b0_1551362077643_666577_6063) is 'other', the type of the hash.
 <a name="_16_9_f2e0365_1375898077639_261665_2348"></a>`Id`|1|`String`|A serial number or otherwise identifier associated with the device.
 <a name="_18_2_43401a7_1448918078516_548548_4357"></a>`Manufacturer`|0..1|`String`|Manufacturer of the device.
 <a name="_18_2_43401a7_1458823425264_550724_4458"></a>`Model`|0..1|`String`|Model of the device.
-<a name="_19_0_43701b0_1551362095000_687582_6067"></a>`OtherHashType`|0..1|`String`|If [HashType](#_19_0_43701b0_1551362077643_666577_6063) is 'other', the type of the hash.
-<a name="_18_2_43401a7_1448918045388_252688_4353"></a>`OtherType`|0..1|`String`|Used when [Type](#_18_2_43401a7_1458837190975_379280_4518) is ‘other’.
 <a name="_18_2_43401a7_1458837190975_379280_4518"></a>`Type`|0..1|`DeviceType`|Enumerated usage of the device, e.g., ems, scan-single, etc.
+<a name="_18_2_43401a7_1448918045388_252688_4353"></a>`OtherType`|0..1|`String`|Used when [Type](#_18_2_43401a7_1458837190975_379280_4518) is ‘other’.
 <a name="_18_2_43401a7_1458039926172_621476_4470"></a>`Version`|0..1|`String`|Version identification of the device.
 
 
@@ -97,7 +97,7 @@ ElectionEventLog is the root class. It includes [Device](#_18_2_43401a7_14588367
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_18_2_43401a7_1458825227267_28946_4470"></a>`Details`|0..1|`String`|Used to associate any details with the event log.
-<a name="_18_2_43401a7_1458837270842_751357_4527"></a>`Device`|0..*|`Device`|Used to describe the device(s) generating the election events.
+<a name="_18_2_43401a7_1458837270842_751357_4527"></a>`{Device}`|0..*|`Device`|Used to describe the device(s) generating the election events.
 <a name="_18_2_43401a7_1458039849744_695134_4466"></a>`ElectionId`|0..1|`String`|Identifies the election associated with the log.
 <a name="_17_0_2_4_c0802fe_1377194442331_435875_2187"></a>`GeneratedTime`|1|`dateTime`|Identifies the date and time the log was generated.
 
@@ -114,8 +114,8 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="_19_0_43701b0_1551892560169_970324_4777"></a>`DeviceManufacturer`|1|`String`|Manufacturer of the device.
 <a name="_19_0_43701b0_1551892560170_517440_4778"></a>`DeviceModel`|1|`String`|Model of the device.
 <a name="_19_0_43701b0_1551892560170_28666_4779"></a>`DeviceVersion`|0..1|`String`|Version identification of the device.
-<a name="_19_0_43701b0_1551892560168_64794_4775"></a>`EventIdDescription`|1..*|`EventIdDescription`|For associating a description with an event ID.
-<a name="_19_0_43701b0_1551892560170_221772_4781"></a>`EventTypeDescription`|1..*|`EventTypeDescription`|For associating a description with an event type.
+<a name="_19_0_43701b0_1551892560168_64794_4775"></a>`{EventIdDescription}`|1..*|`EventIdDescription`|For associating a description with an event ID.
+<a name="_19_0_43701b0_1551892560170_221772_4781"></a>`{EventTypeDescription}`|1..*|`EventTypeDescription`|For associating a description with an event type.
 <a name="_19_0_43701b0_1551892560170_754063_4780"></a>`GeneratedDate`|1|`date`|Identifies the date the documentation report was generated.
 
 
@@ -130,9 +130,9 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="_17_0_2_4_c0802fe_1377195635357_173228_2381"></a>`Description`|0..1|`String`|Used for a brief description of the event.
 <a name="_17_0_2_4_c0802fe_1377195646087_305689_2383"></a>`Details`|0..1|`String`|Used for additional information about the event, e.g., vendor reserved information.
 <a name="_16_9_f2e0365_1375898006411_547543_2341"></a>`Disposition`|1|`EventDispositionType`|The disposition, e.g., success or failure, of the event.
+<a name="_17_0_2_4_f71035d_1448386350889_251652_2466"></a>`OtherDisposition`|0..1|`String`|Used when [Disposition](#_16_9_f2e0365_1375898006411_547543_2341) is ‘other’.
 <a name="_18_0_5_43401a7_1488989461419_677388_4253"></a>`Hash`|0..1|`String`|Contains a cryptographic hash of the event, encoded as a string.
 <a name="_17_0_2_4_c0802fe_1377195615848_618029_2379"></a>`Id`|1|`String`|An identifier associated with the event.
-<a name="_17_0_2_4_f71035d_1448386350889_251652_2466"></a>`OtherDisposition`|0..1|`String`|Used when [Disposition](#_16_9_f2e0365_1375898006411_547543_2341) is ‘other’.
 <a name="_18_0_5_43401a7_1488989494413_340078_4257"></a>`Sequence`|1|`String`|A sequence number/string to uniquely identify the event in the log file.
 <a name="_16_9_f2e0365_1375897866132_94017_2339"></a>`Severity`|0..1|`String`|Used for an indication of the severity of the event, as determined by the device vendor.
 <a name="_16_9_f2e0365_1375897130018_465094_2311"></a>`TimeStamp`|1|`dateTime`|Identifies the date and time the event was generated.
