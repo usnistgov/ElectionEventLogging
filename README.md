@@ -1,6 +1,6 @@
-# Voting - Election Event Logging CDF Specification
+# Voting - NIST Special Publication 1500-101 Election Event Logging Common Data Format Specification Version 1
 
-This repository holds the NIST Special Publication 1500-101 Election Event Logging common data format specification and related information and files that are being created by NIST and collaborators.  The election event logging specification is complete and awaiting final publishing by NIST.  Besides the PDF and Word versions of the specification located in this repository, there is an HTML version at:
+This repository holds the NIST Special Publication 1500-101 Election Event Logging Common Data Format Specification Version 1 and supporting files.  Besides the PDF and Word versions of the specification located in this repository, there is an HTML version at
 
 https://pages.nist.gov/ElectionEventLogging.
 
@@ -12,7 +12,7 @@ The election event logging specification is for election event logs produced by 
  - Manufacturers can use the same, defined format for defining event codes and other information that may be specific to their own equipment.
  - Analyzing election logs produced by different types of equipment and different manufacturers is made significantly easier.
 
-Please contact [John Wack](mailto:john.wack@nist.gov) for questions and more information.
+Please contact [John Wack](mailto:john.wack@nist.gov) or [John Dziurlaj](mailto:john@hiltonroscoe.com) for questions and more information.
 
 ## Repo Structure
 
