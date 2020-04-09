@@ -16,7 +16,7 @@ The election event logging specification is for election event logs produced by 
  - Manufacturers can use the same, defined format for defining event codes and other information that may be specific to their own equipment.
  - Analyzing election logs produced by different types of equipment and different manufacturers is made significantly easier.
 
-Please contact [John Wack](mailto:john.wack@nist.gov) or [John Dziurlaj](mailto:john@hiltonroscoe.com) for questions and more information.
+Please contact [John Wack](mailto:john.wack@nist.gov) or [John Dziurlaj](mailto:john@hiltonroscoe.com) for questions.
 
 ## Repo Structure
 
@@ -26,7 +26,7 @@ Please contact [John Wack](mailto:john.wack@nist.gov) or [John Dziurlaj](mailto:
 |Election_Event_Logging_UML_documentation.md|UML documentation in MarkDown|
 |EventLogging.png|Image of UML model|
 |EventLoggingV1.xml|MagicDraw UML Model|
-|NIST SP 1500-101 ElectionEventLogging.docm|Word version of election event logging specification|
-|**NIST SP 1500-101 ElectionEventLogging.pdf**|PDF version of election event logging specification|
+|NIST 1500-101 EEL Specification V1.docm|Word version of election event logging specification|
+|**NIST 1500-101 EEL Specification V1.pdf**|PDF version of election event logging specification|
 |**NIST_V1_election_event_logging.json**|Election event logging JSON schema|
 |**NIST_V1_election_event_logging.xml**|Election event logging XML schema|
