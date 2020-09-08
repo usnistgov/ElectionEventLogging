@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema elementFormDefault="qualified" targetNamespace="NIST_V1-8_election_event_logging.xsd" version="1.0" xmlns="NIST_V1-8_election_event_logging.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://itl.nist.gov/ns/voting/1500-101/v1" version="1.0.2" xmlns="http://itl.nist.gov/ns/voting/1500-101/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- ========== Roots ========== -->
   <xsd:element name="ElectionEventLog" type="ElectionEventLog"/>
   <xsd:element name="ElectionEventLogDocumentation" type="ElectionEventLogDocumentation"/>
