@@ -2,10 +2,7 @@
 <script src="https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js" type="text/javascript" defer="defer"></script>
 <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"></script>
 
-<title>NIST SP 1500-101 Election Event Logging Common Data Format Specification Draft Version 1.0</title>
-# **NIST SP 1500-101 Election Event Logging Common Data Format Specification Draft Version 1.0**
-
-**John P. Wack, editor**
+# ** National Institute of Standards and Technology (NIST) Special Publication 1500-101 Election Event Logging Common Data Format Specification Version 1**
 
 **September 2017**
 
