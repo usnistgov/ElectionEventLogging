@@ -4,7 +4,7 @@
 
 # National Institute of Standards and Technology (NIST) Special Publication 1500-101 Election Event Logging Common Data Format Specification Version 1
 
-**September 2017**
+**September 2017 **
 
     NIST Special Publication series 1500 is intended to capture external perspectives related to NIST standards, measurement, and
     testing-related efforts. These external perspectives can come from industry, academia, government, and others. These reports are
